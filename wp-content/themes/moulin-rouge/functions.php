@@ -65,8 +65,8 @@ function create_service_taxonomy(){
         'public'                => true,
         'show_in_nav_menus'     => true, // равен аргументу public
         'show_ui'               => true, // равен аргументу public
-        'show_tagcloud'         => true, // равен аргументу show_ui
-        'hierarchical'          => false,
+        'show_tagcloud'         => false, // равен аргументу show_ui
+        'hierarchical'          => true,
         'rewrite'               => true,
         //'query_var'             => $taxonomy, // название параметра запроса
         'capabilities'          => array(),
@@ -99,8 +99,8 @@ function create_location_taxonomy(){
         'public'                => true,
         'show_in_nav_menus'     => true, // равен аргументу public
         'show_ui'               => true, // равен аргументу public
-        'show_tagcloud'         => true, // равен аргументу show_ui
-        'hierarchical'          => false,
+        'show_tagcloud'         => false, // равен аргументу show_ui
+        'hierarchical'          => true,
         'rewrite'               => true,
         //'query_var'             => $taxonomy, // название параметра запроса
         'capabilities'          => array(),
@@ -111,7 +111,6 @@ function create_location_taxonomy(){
     );
     register_taxonomy('location', array('profile'), $args );
 }
-
 
 
 ?>

@@ -4,7 +4,6 @@ Template Name: анкеты
 */
 ?>
 <?php get_header(); ?>
-
     <!-- main -->
     <main>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -37,7 +36,7 @@ Template Name: анкеты
 
             <div class="bordered profile-main">
                 <div class="row">
-                    <div class="col-md-5 left">
+                    <div class="col-md-5 left clearfix">
 
 
                         <?php if( have_rows('photos') ): ?>
@@ -121,6 +120,7 @@ Template Name: анкеты
 		                        </p>
 	                        <? } ?>
 
+
 	                        <? $breast = get_field('breast');
 	                        if (!empty($breast)) { ?>
 		                        <p>
@@ -197,5 +197,4 @@ Template Name: анкеты
         <?php endif; ?>
     </main>
     <!-- END main -->
-
 <?php get_footer(); ?>

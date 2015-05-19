@@ -49,7 +49,6 @@
                 <div class="row">
                     <div class="col-md-12 clearfix">
 
-
 	                    <?
 	                    $wpqueryArgs;
 	                    if (!empty($sortBy)) {
@@ -181,7 +180,7 @@
                 </div>
 <!--                <div class="row">-->
 <!--                    <div class="col-md-12">-->
-<!--                        <button class="btn btn-more">Показать еще</button>-->
+<!--                        <button class="js__btn_more btn btn-more">Показать еще</button>-->
 <!--                    </div>-->
 <!--                </div>-->
             </div>

@@ -54,7 +54,7 @@ html, body {
     background-repeat: repeat;
     min-height: 100%;
     padding: 38px 0 25px;
-    min-width: 1280px;
+    min-width: 320px;
 }
 header {
     background-image: url(../img/header-bg.jpg);
@@ -477,4 +477,71 @@ footer {
 }
 .location-id {
     visibility: hidden;
+}
+
+
+
+@media (max-width: 992px) {
+    .profile-item .photo, .profile-main .photo {
+        padding-right: 15px;
+    }
+    .profile-item .info, .profile-main .info {
+        padding: 20px 15px 15px 15px;
+    }
+    .profile-main .left .fancybox {
+        &.item-2 {
+            height: auto;
+            max-height: none;
+        }
+        &.item-3 {
+            height: auto;
+            max-height: none;
+        }
+        &.item-4 {
+            height: auto;
+            max-height: none;
+        }
+        &.item-5 {
+            height: auto;
+            max-height: none;
+        }
+    }
+}
+@media (max-width: 640px) {
+    .profiles-list {
+        margin: 0;
+    }
+    .profile-item, .profile-main {
+        float: none;
+        width: 100%;
+        display: block;
+        margin: 15px 0 0;
+    }
+    .profiles-filter .title {
+        display: Block;
+        text-align: center;
+        margin: 0 0 15px;
+    }
+    .profiles-filter {
+        text-align: center;
+    }
+    .profiles-filter .select2-container {
+        text-align: left;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .btn.btn-filter {
+        margin: 10px 0 0;
+    }
+    .profiles-filter .select2-container {
+        margin: 0;
+    }
+    .logo-big {
+        width: 315px;
+        margin-left: -157px;
+        background-size: 100%;
+        height: 67px;
+    }
 }

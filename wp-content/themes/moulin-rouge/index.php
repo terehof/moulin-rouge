@@ -1,4 +1,3 @@
-
 <?php get_header('index'); ?>
 
     <!-- main -->
@@ -24,7 +23,6 @@
                     <div class="col-md-12">
                         <p class="title">Подобрать:</p>
                         <i>Район:</i>
-
 
 	                    <? $sortBy = $_POST['district']; ?>
 	                    <form action="" method="POST" class="form-filter">
@@ -65,7 +63,7 @@
 			                    )
 			                    );
 	                    } else {
-		                    $wpqueryArgs = array('post_type' => 'profile', 'posts_per_page' => -1, 'order' => 'ASC');
+		                    $wpqueryArgs = array('post_type' => 'profile', 'posts_per_page' => 2, 'order' => 'ASC');
 	                    }
 	                    ?>
                         <?php $profiles = new WP_query($wpqueryArgs); ?>
@@ -173,16 +171,48 @@
                         <?php $one = !$one; if ($one) echo '</div><div class="item-row">'; ?>
                         <?php endwhile; ?>
                         <!-- post navigation -->
+
+	                            <?php paginate_links(); ?>
+
                         <?php else: ?>
                         <!-- no posts found -->
                         <?php endif; ?>
                     </div>
                 </div>
-<!--                <div class="row">-->
-<!--                    <div class="col-md-12">-->
-<!--                        <button class="js__btn_more btn btn-more">Показать еще</button>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <div class="row">
+                    <div class="col-md-12">
+
+
+<!--	                    <form action="">-->
+<!--		                    <input type="hidden" name="ajax" value="true"/>-->
+<!--		                    <input type="hidden" name="itemCurr" value=""/>-->
+		                    <button type="submit" onsubmit="return false;" class="js__btn_more btn btn-more">Показать еще</button>
+<!--	                    </form>-->
+                    </div>
+                </div>
+	                <script>
+//		                $(document).ready(function() {
+//			                $('.js__btn_more').on('click', function(e){
+//			                    e.preventDefault();
+//				                var itemCurrent;
+//				                itemCurrent = $('.profile-item').length;
+//				                console.log(itemCurrent);
+//				                $('input[name="itemCurr"]').val(itemCurrent);
+//
+//								var url = $(this).parent('form').attr('action');
+//				                var message = "ajax";
+//				                $.post(url, {
+//					                message:message
+//				                },function(result){
+//					                console.log(result);
+////					                if(result == 'sent'){
+////						                $('.btn-subscribe').text('отправлено!').addClass('done');
+////					                }
+//				                });
+//
+//			                });
+//		                })
+	                </script>
             </div>
         </div>
     </main>

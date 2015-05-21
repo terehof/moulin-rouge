@@ -113,4 +113,6 @@ function create_location_taxonomy(){
 }
 
 
+
+
 ?>

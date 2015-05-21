@@ -196,5 +196,7 @@ Template Name: анкеты
             <!-- no posts found -->
         <?php endif; ?>
     </main>
+
+<div class="bottom-line"></div>
     <!-- END main -->
 <?php get_footer(); ?>

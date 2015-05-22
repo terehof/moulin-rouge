@@ -63,7 +63,7 @@
 			                    )
 			                    );
 	                    } else {
-		                    $wpqueryArgs = array('post_type' => 'profile', 'posts_per_page' => 2, 'order' => 'ASC');
+		                    $wpqueryArgs = array('post_type' => 'profile', 'posts_per_page' => -1, 'order' => 'ASC');
 	                    }
 	                    ?>
                         <?php $profiles = new WP_query($wpqueryArgs); ?>
@@ -171,9 +171,6 @@
                         <?php $one = !$one; if ($one) echo '</div><div class="item-row">'; ?>
                         <?php endwhile; ?>
                         <!-- post navigation -->
-
-	                            <?php paginate_links(); ?>
-
                         <?php else: ?>
                         <!-- no posts found -->
                         <?php endif; ?>
@@ -186,7 +183,7 @@
 <!--	                    <form action="">-->
 <!--		                    <input type="hidden" name="ajax" value="true"/>-->
 <!--		                    <input type="hidden" name="itemCurr" value=""/>-->
-		                    <button type="submit" onsubmit="return false;" class="js__btn_more btn btn-more">Показать еще</button>
+<!--		                    <button type="submit" onsubmit="return false;" class="js__btn_more btn btn-more">Показать еще</button>-->
 <!--	                    </form>-->
                     </div>
                 </div>

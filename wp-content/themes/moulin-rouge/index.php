@@ -1,5 +1,4 @@
 <?php get_header('index'); ?>
-
     <!-- main -->
     <main>
         <div class="container">
@@ -16,7 +15,6 @@
                     </div>
                 </div>
             </div>
-
             <h1>Анкеты</h1>
             <div class="profiles-filter bordered">
                 <div class="row">
@@ -215,7 +213,6 @@
     </main>
     <!-- END main -->
 
-
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?$seoText = get_field('seo_text'); ?>
 	<? if( !empty($seoText) ): ?>
@@ -231,5 +228,4 @@
 <?php else: ?>
 <!-- no posts found -->
 <?php endif; ?>
-
 <?php get_footer(); ?>

@@ -16,7 +16,6 @@ Template Name: анкеты
                 </div>
             </div>
             <h1><? the_title(); ?></h1>
-
             <div class="bordered breadcrumbs">
                 <div class="row">
                     <div class="col-md-12">
@@ -33,12 +32,9 @@ Template Name: анкеты
                     </div>
                 </div>
             </div>
-
             <div class="bordered profile-main">
                 <div class="row">
                     <div class="col-md-5 left clearfix">
-
-
                         <?php if( have_rows('photos') ): ?>
 	                        <? $index = 0; ?>
 
@@ -67,7 +63,6 @@ Template Name: анкеты
 		                        <?
 		                        }
 		                        ?>
-
 		                        <? $index++ ?>
                             <?php endwhile; ?>
 	                        <? if($index>5) echo "</div>"; ?>
@@ -84,15 +79,12 @@ Template Name: анкеты
                                 <? the_title(); ?>
                             </i>
                         </p>
-
 	                    <? $phone = get_field('phone');
 	                    if (!empty($phone)) { ?>
 		                    <p class="phone">
 			                    <? echo $phone; ?>
 		                    </p>
 	                    <? } ?>
-
-
 
                         <p class="location">
                             <span>Район:</span>
@@ -111,7 +103,6 @@ Template Name: анкеты
 		                        </p>
 	                        <? } ?>
 
-
 	                        <? $weight = get_field('weight');
 	                        if (!empty($weight)) { ?>
 		                        <p>
@@ -119,7 +110,6 @@ Template Name: анкеты
 			                        <? echo $weight; ?>
 		                        </p>
 	                        <? } ?>
-
 
 	                        <? $breast = get_field('breast');
 	                        if (!empty($breast)) { ?>
@@ -183,7 +173,6 @@ Template Name: анкеты
                                 <? echo $aboutMe; ?>
                             </p>
                                 <? endif; ?>
-
                         </div>
                     </div>
                 </div>
